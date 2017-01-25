@@ -11,7 +11,7 @@ http://fimi.ua.ac.be/data/connect.dat
   * $ voltdb < volt.sql <br>
 - (2) load java class to voltdb procedure <br>
   * $ python load_proc.py LoadTransaction
-  * $ python load_proc.py Tproc
 - (3) 執行 load data<br>
   * $ java DataToVolt <br>
-- (4) 
+  
+  
