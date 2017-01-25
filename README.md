@@ -19,3 +19,6 @@ http://fimi.ua.ac.be/data/connect.dat
   * voltdb
     * create index Tindex on transaction(tid);
     * create index Iindex on transaction(Iid);
+- (2) get L1 view
+  * voltdb
+    * create view L1(iid,support) as select iid,COUNT(*) from transaction group by iid;
