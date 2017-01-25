@@ -14,4 +14,8 @@ http://fimi.ua.ac.be/data/connect.dat
 - (3) 執行 load data<br>
   * $ java DataToVolt <br>
   
-  
+# create index and get L1 view
+- (1) create index 
+  * voltdb
+    * create index Tindex on transaction(tid);
+    * create index Iindex on transaction(Iid);
