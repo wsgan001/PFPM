@@ -29,7 +29,7 @@ http://fimi.ua.ac.be/data/connect.dat
 - (1) load java class to voltdb procedure<br>
   * $ python load_proc.py Tproc<br>
   * voltdb<br>
-    * exec Tproc Wnum,Wid;<br>
+    * exec Tproc Wnum,Wid;
       * Mnum : 平行worker數<br>
       * Mid : worker ID<br>
       * 一個worker會執行一次Tproc procedure, 將transaction table中特定多個tid打散成item pairs : (iid1, iid2)<br>
