@@ -1,11 +1,11 @@
-########## PFPM
+# PFPM
 frequent pattern mining by using VoltDB and MQTT
 
-# Get Dataset
+### Get Dataset
 http://fimi.ua.ac.be/data/connect.dat
 
 
-# dataset to voltdb
+### dataset to voltdb
 - (0) voltdb 啟動 <br>
 - (1) create transaction table and partition <br>
   * $ voltdb < volt.sql <br>
@@ -14,7 +14,7 @@ http://fimi.ua.ac.be/data/connect.dat
 - (3) 執行 load data<br>
   * $ java DataToVolt <br>
   
-# create index and get L1 view
+### create index and get L1 view
 - (1) create index 
   * voltdb
     * create index Tindex on transaction(tid);
