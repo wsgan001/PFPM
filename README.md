@@ -9,17 +9,17 @@ http://fimi.ua.ac.be/data/connect.dat
 ## dataset to voltdb
 - (0) voltdb 啟動 <br>
 - (1) create transaction table and partition <br>
-  * $ voltdb < volt.sql <br>
+  - $ voltdb < volt.sql <br>
 - (2) load java class to voltdb procedure <br>
-  * $ python load_proc.py LoadTransaction
+  - $ python load_proc.py LoadTransaction
 - (3) 執行 load data<br>
-  * $ java DataToVolt <br>
+  - $ java DataToVolt <br>
   
 ## create index and get L1 view
 - (1) create index <br>
-  * voltdb<br>
-    * create index Tindex on transaction(tid);<br>
-    * create index Iindex on transaction(Iid);<br>
+  - voltdb<br>
+    - create index Tindex on transaction(tid);<br>
+    - create index Iindex on transaction(Iid);<br>
 - (2) get L1 view<br>
   * voltdb<br>
     * create view L1(iid,support) as select iid,COUNT(*) from transaction group by iid;<br>
@@ -29,7 +29,7 @@ http://fimi.ua.ac.be/data/connect.dat
 - (1) load java class to voltdb procedure<br>
   * $ python load_proc.py Tproc<br>
   * voltdb<br>
-    * exec Tproc Wnum,Wid;
+    * exec Tproc Wnum,Wid;<br>
       * Mnum : 平行worker數<br>
       * Mid : worker ID<br>
       * 一個worker會執行一次Tproc procedure, 將transaction table中特定多個tid打散成item pairs : (iid1, iid2)<br>
